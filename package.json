@@ -1,0 +1,28 @@
+{
+  "name": "@ivosabev/hui",
+  "version": "0.0.1",
+  "description": "Human User Interface (HUI) is a component library based on React Aria Components and styled with Stylex",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivosabev/hui.git"
+  },
+  "keywords": [
+    "hui",
+    "human user interface",
+    "components",
+    "js",
+    "react",
+    "react aria",
+    "react aria components",
+    "stylex"
+  ],
+  "author": "Ivo Sabev <ivolution@gmail.com> (http://ivosabev.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivosabev/hui/issues"
+  },
+  "homepage": "https://github.com/ivosabev/hui#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
