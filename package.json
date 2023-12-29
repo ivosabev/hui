@@ -1,6 +1,6 @@
 {
   "name": "@ivosabev/hui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Human User Interface (HUI) is a component library based on React Aria Components and styled with Stylex",
   "repository": {
     "type": "git",
