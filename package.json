@@ -22,6 +22,11 @@
     "url": "https://github.com/ivosabev/hui/issues"
   },
   "homepage": "https://github.com/ivosabev/hui#readme",
+  "sideEffects": false,
+  "type": "module",
+  "imports": {
+    "#*": "./*"
+  },
   "devDependencies": {
     "npm-check": "6.0.1",
     "release-it": "17.0.1"
