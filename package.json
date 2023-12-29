@@ -22,11 +22,13 @@
     "url": "https://github.com/ivosabev/hui/issues"
   },
   "homepage": "https://github.com/ivosabev/hui#readme",
+  "devDependencies": {
+    "npm-check": "6.0.1",
+    "release-it": "17.0.1"
+  },
   "scripts": {
     "release": "release-it",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "release-it": "17.0.1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "up": "npm-check --update -f"
   }
 }
