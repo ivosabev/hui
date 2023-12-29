@@ -23,6 +23,10 @@
   },
   "homepage": "https://github.com/ivosabev/hui#readme",
   "scripts": {
+    "release": "release-it",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "release-it": "17.0.1"
   }
 }
