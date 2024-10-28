@@ -33,7 +33,7 @@
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "1.9.0",
+    "@chromatic-com/storybook": "3.1.0",
     "@ivosabev/config": "2.1.0",
     "@storybook/addon-essentials": "8.3.6",
     "@storybook/addon-interactions": "8.3.6",
@@ -50,8 +50,8 @@
     "release-it": "17.10.0",
     "storybook": "8.3.6",
     "typescript": "5.6.3",
-    "vite-tsconfig-paths": "5.0.1",
-    "vite": "5.4.10"
+    "vite": "5.4.10",
+    "vite-tsconfig-paths": "5.0.1"
   },
   "scripts": {
     "build-storybook": "storybook build",
