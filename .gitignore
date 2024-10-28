@@ -1,8 +1,5 @@
-node_modules
+dist/
+node_modules/
 package-lock.json
-
-.DS_Store
-
-*.log
-/.cache
-/dist
+pnpm-lock.yaml
+yarn.lock
