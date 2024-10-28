@@ -1,9 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-	content: ['./src/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}'],
-	plugins: [require('tailwindcss-animate')],
-	theme: {
-		extend: {},
-	},
-};
+import tailwindCssAnimate from 'tailwindcss-animate';
 
+export default {
+  content: ['./src/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}'],
+  plugins: [tailwindCssAnimate],
+  theme: {
+    extend: {},
+  },
+};

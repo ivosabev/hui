@@ -1,0 +1,9 @@
+{
+  "extends": "@ivosabev/config/typescript/build",
+  "include": ["@ivosabev/config/reset.d.ts", "src", "tailwind.config.ts"],
+  "compilerOptions": {
+    "declarationDir": "dist/dts",
+    "outDir": "dist/esm",
+    "tsBuildInfoFile": ".tsbuildinfo/build.tsbuildinfo"
+  }
+}

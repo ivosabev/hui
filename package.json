@@ -1,6 +1,6 @@
 {
   "name": "@ivosabev/hui",
-  "version": "0.0.2",
+  "version": "0.0.9",
   "description": "Human User Interface (HUI) is a component library based on React Aria Components and styled with Stylex",
   "repository": {
     "type": "git",
@@ -27,9 +27,20 @@
   "imports": {
     "#*": "./*"
   },
+  "exports": {
+    "./package.json": "./package.json",
+    "./*": {
+      "types": "./dist/dts/*.d.ts",
+      "import": "./dist/esm/*",
+      "default": "./dist/cjs/*"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "prettier": "@ivosabev/config/prettier",
   "dependencies": {
-    "@ivosabev/helpers": "0.57.1",
+    "@ivosabev/helpers": "0.58.3",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
     "react": "18.3.1",
@@ -39,8 +50,12 @@
     "tailwindcss-animate": "1.0.7"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "3.1.0",
-    "@ivosabev/config": "2.1.0",
+    "@babel/cli": "7.25.9",
+    "@babel/core": "7.26.0",
+    "@babel/plugin-transform-export-namespace-from": "7.25.9",
+    "@babel/plugin-transform-modules-commonjs": "7.25.9",
+    "@chromatic-com/storybook": "3.2.1",
+    "@ivosabev/config": "2.3.4",
     "@storybook/addon-essentials": "8.3.6",
     "@storybook/addon-interactions": "8.3.6",
     "@storybook/addon-links": "8.3.6",
@@ -49,12 +64,14 @@
     "@storybook/react": "8.3.6",
     "@storybook/react-vite": "8.3.6",
     "@storybook/test": "8.3.6",
-    "@types/node": "22.8.1",
+    "@types/node": "22.8.4",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "autoprefixer": "10.4.20",
+    "babel-plugin-annotate-pure-calls": "0.4.0",
     "eslint": "9.13.0",
     "npm-check": "6.0.1",
+    "npm-run-all": "4.1.5",
     "postcss": "8.4.47",
     "prettier": "3.3.3",
     "release-it": "17.10.0",
@@ -65,14 +82,27 @@
     "vite-tsconfig-paths": "5.0.1"
   },
   "scripts": {
+    "build-annotate": "babel dist/esm --plugins annotate-pure-calls --out-dir dist/esm --source-maps",
+    "build-cjs": "babel dist/esm --plugins @babel/transform-export-namespace-from --plugins @babel/transform-modules-commonjs --out-dir dist/cjs --source-maps",
+    "build-esm": "./scripts/build-esm.sh",
     "build-storybook": "storybook build",
-    "build": "tsc --p ./tsconfig-build.json && vite build",
+    "build": "./scripts/build.sh",
+    "check-format": "prettier --check .",
+    "check": "tsc -b tsconfig.json",
+    "clean": "rm -rf .tsbuildinfo && rm -rf dist",
     "dev": "vite",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format-check": "prettier --check .",
+    "format": "prettier --write .",
+    "lint-check": "eslint .",
+    "lint-fix": "pnpm lint --fix",
+    "lint": "eslint .",
     "preview": "vite preview",
-    "release": "release-it",
+    "release": "pnpm build && release-it",
     "storybook": "storybook dev -p 6006",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "up": "npm-check --update -f"
-  }
+    "tsc": "tsc",
+    "typecheck": "tsc",
+    "up": "npm-check --update -f",
+    "validate": "run-p -l format lint typecheck"
+  },
+  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228"
 }

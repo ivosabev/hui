@@ -1,9 +1,4 @@
 {
-	"include": ["**/*.ts", "**/*.tsx"],
-	"extends": ["@ivosabev/config/typescript"],
-	"compilerOptions": {
-		"paths": {
-			"#src/*": ["./src/*"],
-		}
-	}
+  "extends": "@ivosabev/config/typescript/dom",
+  "include": ["@ivosabev/config/reset.d.ts", "**/*.ts", "**/*.tsx"]
 }

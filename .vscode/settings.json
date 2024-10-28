@@ -44,6 +44,8 @@
   "scss.validate": false,
   "search.quickOpen.includeHistory": false,
   "search.exclude": {
+    "**/dist": true,
+    "**/release": true,
     "**/build": true,
     "**/node_modules": true,
     "**/public": true,
