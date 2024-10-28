@@ -51,6 +51,6 @@
   },
   "typescript.autoClosingTags": false,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
-  "typescript.referencesCodeLens.enabled": true,
+  "typescript.referencesCodeLens.enabled": false,
   "typescript.tsdk": "./node_modules/typescript/lib"
 }
